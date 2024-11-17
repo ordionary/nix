@@ -1,0 +1,27 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	ignorecase=false
+[commit]
+	gpgsign = false
+
+[includeIf "gitdir:/Users/nicco/"]
+	path = "~/.dotfiles/files/git/config.personal"
+
+[includeIf "gitdir:/Users/niccoloborgioli/"]
+	path = "~/.dotfiles/files/git/config.work"
+
+[pull]
+	rebase = false
+
+[push]
+	autoSetupRemote = true
+[branch]
+	sort = -committerdate
+[alias]
+	fpush = push --force-with-lease
