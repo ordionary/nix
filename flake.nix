@@ -33,6 +33,7 @@
           # $ darwin-rebuild changelog
           system.stateVersion = 5;
           nixpkgs.hostPlatform = "aarch64-darwin";
+          nixpkgs.config.allowUnfree = true;
 
           # Nix Darwin
           # https://daiderd.com/nix-darwin/manual/index.html
@@ -41,6 +42,7 @@
           system.defaults.dock.autohide = true;
           system.defaults.dock.orientation = "left";
           system.defaults.finder.AppleShowAllExtensions = true;
+          system.keyboard.enableKeyMapping = true;
           system.keyboard.remapCapsLockToEscape = true;
           system.defaults.NSGlobalDomain.InitialKeyRepeat = 25;
           system.defaults.NSGlobalDomain.KeyRepeat = 2;
@@ -56,6 +58,12 @@
 
           homebrew.enable = true;
           homebrew.casks = import ./cask.nix;
+          # homebrew.taps = [
+          #   "hashicorp/tap"
+          # ];
+          # homebrew.brews = [
+          #   "hashicorp/tap/vault"
+          # ];
 
           # Home Manager
           home-manager.backupFileExtension = "backup";

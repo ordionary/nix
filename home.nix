@@ -1,6 +1,3 @@
-# home.nix
-# home-manager switch 
-
 { config, pkgs, ... }:
 
 {
@@ -11,12 +8,6 @@
   home.username = "niccoloborgioli";
   home.homeDirectory = "/Users/niccoloborgioli";
 
-  # home.sessionPath = [
-  #   "/run/current-system/sw/bin"
-  #   "$HOME/.nix-profile/bin"
-  # ];
-
-  # Makes sense for user specific applications that shouldn't be available system-wide
   home.packages = [
     pkgs.tmux
     pkgs.oh-my-posh
@@ -49,6 +40,9 @@
     # Language specific
     pkgs.nixfmt-rfc-style
     pkgs.fnm
+
+    # sflx
+    pkgs.vault
 
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
