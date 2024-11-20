@@ -43,6 +43,7 @@
 
     # sflx
     pkgs.vault
+    pkgs.cocoapods
 
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
