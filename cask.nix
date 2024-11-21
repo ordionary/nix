@@ -27,4 +27,5 @@
   "imageoptim"
   "appcleaner"
 
+  "android-studio"
 ]
