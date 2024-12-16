@@ -14,6 +14,7 @@
     pkgs.git
     pkgs.git-lfs
     pkgs.git-crypt
+    pkgs.bfg-repo-cleaner
     pkgs.gnutar
     pkgs.gnupg
     pkgs.htop
@@ -40,13 +41,19 @@
     # Language specific
     pkgs.nixfmt-rfc-style
     pkgs.fnm
+    pkgs.bun
+    pkgs.deno
+    pkgs.zig
+    # Python
+    pkgs.uv
+    pkgs.ruff
 
     # sflx
     pkgs.vault
     pkgs.cocoapods
     pkgs.phrase-cli
 
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    #(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   home.sessionVariables = {
