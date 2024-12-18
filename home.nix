@@ -53,7 +53,7 @@
     pkgs.cocoapods
     pkgs.phrase-cli
 
-    #(pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    pkgs.nerd-fonts.jetbrains-mono
   ];
 
   home.sessionVariables = {
