@@ -47,6 +47,10 @@
     # Python
     pkgs.uv
     pkgs.ruff
+    pkgs.tectonic
+
+    # Codding
+    pkgs.nixpacks
 
     # sflx
     pkgs.vault
@@ -56,12 +60,15 @@
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
+  fonts.fontconfig.enable = true;
+
   home.sessionVariables = {
     EDITOR = "nvim";
   };
 
   home.file = {
     ".config/omp/config.yaml".source = ./files/omp/config.yaml;
+    ".config/ghostty/corfig".source = ./files/ghostty/config;
     ".config/kitty".source = ./files/kitty;
     ".gitconfig".source = ./files/git/gitconfig;
     ".gitignore_global".source = ./files/git/gitignore_global;

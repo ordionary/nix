@@ -8,6 +8,7 @@
   "keycastr"
   "raycast"
   "kitty"
+  "ghostty"
 
   # Dev
   "docker"
