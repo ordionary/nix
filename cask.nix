@@ -7,7 +7,6 @@
   "kap"
   "keycastr"
   "raycast"
-  "kitty"
   "ghostty"
 
   # Dev
