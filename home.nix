@@ -68,7 +68,7 @@
 
   home.file = {
     ".config/omp/config.yaml".source = ./files/omp/config.yaml;
-    ".config/ghostty/corfig".source = ./files/ghostty/config;
+    ".config/ghostty/config".source = ./files/ghostty/config;
     ".config/kitty".source = ./files/kitty;
     ".gitconfig".source = ./files/git/gitconfig;
     ".gitignore_global".source = ./files/git/gitignore_global;
