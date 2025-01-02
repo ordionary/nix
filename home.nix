@@ -58,6 +58,7 @@
     pkgs.vault
     pkgs.cocoapods
     pkgs.phrase-cli
+    pkgs.boundary
 
     pkgs.nerd-fonts.jetbrains-mono
   ];
