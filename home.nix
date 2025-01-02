@@ -28,6 +28,7 @@
     pkgs.rsync
     pkgs.direnv
     pkgs.zoxide
+    pkgs.devenv
 
     # Editor
     pkgs.neovim
@@ -44,10 +45,11 @@
     pkgs.bun
     pkgs.deno
     pkgs.zig
-    # Python
     pkgs.uv
     pkgs.ruff
     pkgs.tectonic
+    pkgs.tex-fmt
+    pkgs.rustup
 
     # Codding
     pkgs.nixpacks

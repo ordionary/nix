@@ -1,22 +1,27 @@
 [
+  "knockknock"
+  "lulu"
+  "oversight"
+
   "aldente"
   "alt-tab"
   "keka"
-  "knockknock"
-  "lulu"
-  "kap"
+  "dozer"
   "keycastr"
   "raycast"
   "ghostty"
+  "lihaoyun6/tap/quickrecorder"
 
   # Dev
   "docker"
   "sloth"
   "vscodium"
   "httpie"
+  "tailscale"
 
   # Apps
   "arc"
+  "zen-browser"
   "bitwarden"
   "spotify"
   "vlc"
@@ -26,6 +31,8 @@
   "mediahuman-audio-converter"
   "imageoptim"
   "appcleaner"
-
-  "android-studio"
+  "daisydisk"
+  "discord"
+  "signal"
+  "vlc"
 ]

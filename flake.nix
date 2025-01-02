@@ -56,15 +56,9 @@
 
           homebrew.enable = true;
           homebrew.casks = import ./cask.nix;
+          homebrew.taps = [ "lihaoyun6/tap" ];
           homebrew.onActivation.autoUpdate = true;
-          # Look into https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.onActivation.cleanup
-
-          # homebrew.taps = [
-          #   "hashicorp/tap"
-          # ];
-          # homebrew.brews = [
-          #   "hashicorp/tap/vault"
-          # ];
+          homebrew.onActivation.cleanup = "zap";
 
           # Home Manager
           home-manager.backupFileExtension = "backup";
