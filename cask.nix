@@ -6,7 +6,7 @@
   "aldente"
   "alt-tab"
   "keka"
-  "dozer"
+  "jordanbaird-ice"
   "keycastr"
   "raycast"
   "ghostty"
@@ -20,6 +20,7 @@
   "tailscale"
 
   # Apps
+  "figma"
   "arc"
   "zen-browser"
   "bitwarden"
