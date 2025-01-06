@@ -29,6 +29,7 @@
     pkgs.direnv
     pkgs.zoxide
     pkgs.devenv
+    pkgs.bitwarden-cli
 
     # Editor
     pkgs.neovim
