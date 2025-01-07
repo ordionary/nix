@@ -18,6 +18,7 @@
   "vscodium"
   "httpie"
   "tailscale"
+  "utm"
 
   # Apps
   "figma"
