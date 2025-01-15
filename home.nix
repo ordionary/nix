@@ -85,7 +85,7 @@
     t = "tmux new-session -A -s main";
     e = "nvim";
     hms = "home-manager switch --flake ~/nix#root -b backup";
-    snd = "darwin-rebuild switch --flake ~/.config/nix-darwin#mpb";
+    snd = "darwin-rebuild switch --flake ~/.config/nix-darwin#mbp";
   };
 
   programs.fish = {
