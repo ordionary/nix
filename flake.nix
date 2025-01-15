@@ -37,9 +37,25 @@
           # https://daiderd.com/nix-darwin/manual/index.html
           environment.systemPackages = [ ];
 
+          # Security
+          system.defaults.screensaver.askForPassword = true;
+          system.defaults.screensaver.askForPasswordDelay = 0;
+          system.defaults.loginwindow.GuestEnabled = false;
+
+          # Dock
           system.defaults.dock.autohide = true;
           system.defaults.dock.orientation = "left";
-          system.defaults.finder.AppleShowAllExtensions = true;
+          system.defaults.dock.show-recents = false;
+          system.defaults.dock.persistent-apps = [
+            "/Applications/Arc.app"
+            "/Applications/Ghostty.app"
+            "/Applications/VSCodium.app"
+            "/Applications/Spotify.app"
+            "/System/Applications/System Settings.app"
+          ];
+          system.defaults.dock.persistent-others = [ ];
+
+          # Input devices
           system.keyboard.enableKeyMapping = true;
           system.keyboard.remapCapsLockToEscape = true;
           system.defaults.NSGlobalDomain.InitialKeyRepeat = 25;
@@ -47,6 +63,10 @@
           system.defaults.NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
           system.defaults.NSGlobalDomain."com.apple.trackpad.scaling" = 0.875;
           system.defaults.trackpad.Dragging = true;
+
+          # Finder
+          system.defaults.finder.AppleShowAllExtensions = true;
+          system.defaults.finder.ShowPathbar = true;
 
           users.users."niccoloborgioli" = {
             home = "/Users/niccoloborgioli";
@@ -67,7 +87,7 @@
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#Niccolo-Borgioli-s-MacBook-Pro
-      darwinConfigurations."sflx" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
           home-manager.darwinModules.home-manager
@@ -80,6 +100,6 @@
       };
 
       # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."sflx".pkgs;
+      darwinPackages = self.darwinConfigurations."mbp".pkgs;
     };
 }

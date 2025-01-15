@@ -13,5 +13,5 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 git clone https://github.com/cupcakearmy/nix-macos ~/.config/nix-darwin
 
 # Installation
-nix run nix-darwin -- switch --flake ~/.config/nix-darwin#sflx
+nix run nix-darwin -- switch --flake ~/.config/nix-darwin#mbp
 ```
