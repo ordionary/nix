@@ -68,6 +68,9 @@
           system.defaults.finder.AppleShowAllExtensions = true;
           system.defaults.finder.ShowPathbar = true;
 
+          # Other
+          system.startup.chime = false;
+
           users.users."niccoloborgioli" = {
             home = "/Users/niccoloborgioli";
             shell = pkgs.fish;
