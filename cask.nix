@@ -16,7 +16,7 @@
   "docker"
   "sloth"
   "vscodium"
-  "httpie"
+  "hoppscotch"
   "tailscale"
   "utm"
 
