@@ -64,7 +64,4 @@
       cleanup = "zap";
     };
   };
-
-  # Home Manager
-  home-manager.backupFileExtension = "backup";
 }
