@@ -1,0 +1,54 @@
+{ pkgs }:
+with pkgs;
+[
+  # Base
+  tmux
+  oh-my-posh
+  git
+  git-lfs
+  git-crypt
+  bfg-repo-cleaner
+  gnutar
+  gnupg
+  htop
+  rclone
+  rename
+  tmux
+  tree
+  wget
+  woff2
+  bat
+  rsync
+  zoxide
+  #bitwarden-cli
+
+  # Dev
+  devenv
+  direnv
+  nixpacks
+  ollama
+
+  # Editor
+  neovim
+  fzf
+  lazygit
+  lua
+  luajitPackages.luarocks
+  ast-grep
+  ripgrep
+
+  # Language specific
+  nixfmt-rfc-style
+  fnm
+  bun
+  deno
+  zig
+  uv
+  ruff
+  tectonic
+  tex-fmt
+  rustup
+
+  # Fonts
+  nerd-fonts.jetbrains-mono
+]

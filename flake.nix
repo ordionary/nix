@@ -19,6 +19,8 @@
       home-manager,
     }:
     let
+      name = "mbp";
+      hosts = import ./hosts;
       configuration =
         { pkgs, ... }:
         {
@@ -35,7 +37,6 @@
 
           # Nix Darwin
           # https://daiderd.com/nix-darwin/manual/index.html
-          environment.systemPackages = [ ];
 
           # Security
           system.defaults.screensaver.askForPassword = true;
@@ -77,21 +78,29 @@
           };
           programs.fish.enable = true;
 
-          homebrew.enable = true;
-          homebrew.casks = import ./cask.nix;
-          homebrew.taps = [ "lihaoyun6/tap" ];
-          homebrew.onActivation.autoUpdate = true;
-          homebrew.onActivation.cleanup = "zap";
+          homebrew = {
+            enable = true;
+            casks = import ./cask.nix;
+            taps = [ "lihaoyun6/tap" ];
+            onActivation = {
+              autoUpdate = true;
+              cleanup = "zap";
+            };
+          };
 
           # Home Manager
           home-manager.backupFileExtension = "backup";
         };
     in
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#Niccolo-Borgioli-s-MacBook-Pro
-      darwinConfigurations."mbp" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."${name}" = nix-darwin.lib.darwinSystem {
         modules = [
+          (
+            { config, ... }:
+            {
+              config._module.args = { inherit hosts; };
+            }
+          )
           configuration
           home-manager.darwinModules.home-manager
           {
@@ -103,6 +112,6 @@
       };
 
       # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."mbp".pkgs;
+      # darwinPackages = self.darwinConfigurations."${name}".pkgs;
     };
 }

@@ -19,6 +19,7 @@
   "hoppscotch"
   "tailscale"
   "utm"
+  "balenaetcher"
 
   # Apps
   "figma"
