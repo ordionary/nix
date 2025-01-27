@@ -1,5 +1,5 @@
 {
   username = "niccoloborgioli";
-  hostName = "mac16";
+  hostName = "sflx";
   platform = "aarch64-darwin";
 }

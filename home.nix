@@ -1,11 +1,12 @@
-{ pkgs, ... }@args:
+{ host }:
+{ pkgs, ... }:
 {
   # https://nix-community.github.io/home-manager
   home.stateVersion = "25.05"; # Please read the comment before changing.
   programs.home-manager.enable = true;
 
-  home.username = "niccoloborgioli";
-  home.homeDirectory = "/Users/niccoloborgioli";
+  home.username = host.username;
+  home.homeDirectory = "/Users/${host.username}";
 
   home.packages =
     [ ] ++ (import ./home/shared.nix { inherit pkgs; }) ++ (import ./home/sflx.nix { inherit pkgs; });
