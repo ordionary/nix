@@ -1,5 +1,5 @@
 { host }:
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # https://nix-community.github.io/home-manager
   home.stateVersion = "25.05"; # Please read the comment before changing.
@@ -9,7 +9,10 @@
   home.homeDirectory = "/Users/${host.username}";
 
   home.packages =
-    [ ] ++ (import ./home/shared.nix { inherit pkgs; }) ++ (import ./home/sflx.nix { inherit pkgs; });
+    [ ]
+    ++ (import ./home/shared.nix { inherit pkgs; })
+    # TODO: Move to host config
+    ++ lib.optionals (host.hostName == "sflx") (import ./home/sflx.nix { inherit pkgs; });
 
   fonts.fontconfig.enable = true;
 
@@ -32,8 +35,7 @@
       rsync = "rsync -az --info=progress2";
       t = "tmux new-session -A -s main";
       e = "nvim";
-      hms = "home-manager switch --flake ~/nix#root -b backup";
-      snd = "darwin-rebuild switch --flake ~/.config/nix-darwin#mbp";
+      vai = "darwin-rebuild switch --flake ~/.config/nix-darwin#${host.hostName}";
     };
   };
 
