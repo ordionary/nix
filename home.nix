@@ -40,6 +40,9 @@
   };
 
   programs = {
+    direnv.enable = true;
+    zoxide.enable = true;
+
     fish = {
       enable = true;
       interactiveShellInit = ''
@@ -48,12 +51,6 @@
         end
         if type -q fnm
           fnm env --use-on-cd | source
-        end
-        if type -q direnv
-          direnv hook fish | source
-        end
-        if type -q zoxide
-          zoxide init fish | source
         end
       '';
     };

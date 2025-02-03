@@ -19,12 +19,10 @@ with pkgs;
   woff2
   bat
   rsync
-  zoxide
   #bitwarden-cli
 
   # Dev
   devenv
-  direnv
   nixpacks
   ollama
 
