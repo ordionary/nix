@@ -25,6 +25,8 @@ with pkgs;
   devenv
   nixpacks
   ollama
+  colima
+  lazydocker
 
   # Editor
   neovim

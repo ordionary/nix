@@ -5,4 +5,5 @@ with pkgs;
   cocoapods
   phrase-cli
   boundary
+  awscli2
 ]

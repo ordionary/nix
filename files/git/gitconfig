@@ -10,12 +10,6 @@
 [commit]
 	gpgsign = false
 
-[includeIf "gitdir:/Users/nicco/"]
-	path = "~/.dotfiles/files/git/config.personal"
-
-[includeIf "gitdir:/Users/niccoloborgioli/"]
-	path = "~/.dotfiles/files/git/config.work"
-
 [pull]
 	rebase = false
 
@@ -25,3 +19,6 @@
 	sort = -committerdate
 [alias]
 	fpush = push --force-with-lease
+
+[include]
+    path = ~/.gitconfig.local

@@ -1,5 +1,10 @@
-{ flake }:
-{ pkgs, host, ... }:
+{
+  pkgs,
+  host,
+  flake,
+  lib,
+  ...
+}:
 {
   nix.settings.experimental-features = "nix-command flakes";
 
@@ -57,7 +62,8 @@
 
   homebrew = {
     enable = true;
-    casks = import ./cask.nix;
+    # casks = (if builtins.hasAttr "casks" host then host.casks else [ ]) ++ (import ./cask.nix);
+    casks = (lib.attrByPath [ "extras" "casks" ] [ ] host) ++ (import ./cask.nix);
     taps = [ "lihaoyun6/tap" ];
     onActivation = {
       autoUpdate = true;

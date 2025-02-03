@@ -1,8 +1,14 @@
 { host }:
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  sops-nix,
+  ...
+}:
 {
   # https://nix-community.github.io/home-manager
-  home.stateVersion = "25.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05";
   programs.home-manager.enable = true;
 
   home.username = host.username;
@@ -26,6 +32,7 @@
       ".config/ghostty/config".source = ./files/ghostty/config;
       ".gitconfig".source = ./files/git/gitconfig;
       ".gitignore_global".source = ./files/git/gitignore_global;
+      ".gitconfig.local".source = ./files/git/config.work;
       ".config/nvim".source = ./files/nvim;
     };
 
@@ -76,6 +83,16 @@
       '';
       shell = "${pkgs.fish}/bin/fish";
       terminal = "tmux-256color";
+    };
+  };
+
+  # Secrets
+  sops = {
+    age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+    defaultSopsFile = ./secrets/ssh.yaml;
+    secrets.config = {
+      mode = "0600";
+      path = "${config.home.homeDirectory}/.ssh/config";
     };
   };
 

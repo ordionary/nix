@@ -8,7 +8,10 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -17,6 +20,7 @@
       nix-darwin,
       nixpkgs,
       home-manager,
+      sops-nix,
     }:
     let
       hosts = import ./hosts;
@@ -27,18 +31,17 @@
         map (host: {
           name = host.hostName;
           value = nix-darwin.lib.darwinSystem {
+            specialArgs = {
+              inherit sops-nix;
+              inherit host;
+              flake = self;
+            };
             modules = [
-              # Make `host` available as module arg.
-              (
-                { config, ... }:
-                {
-                  config._module.args = { inherit host; };
-                }
-              )
-              # configuration
-              (import ./darwin.nix { flake = self; })
+              (import ./darwin.nix)
+              sops-nix.darwinModules.sops
               home-manager.darwinModules.home-manager
               {
+                home-manager.sharedModules = [ sops-nix.homeManagerModules.sops ];
                 home-manager.backupFileExtension = "backup";
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;

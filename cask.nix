@@ -17,7 +17,6 @@
   "sloth"
   "vscodium"
   "hoppscotch"
-  "tailscale"
   "utm"
   "balenaetcher"
 
