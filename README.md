@@ -15,3 +15,14 @@ git clone https://github.com/cupcakearmy/nix-macos ~/.config/nix-darwin
 # Installation
 nix run nix-darwin -- switch --flake ~/.config/nix-darwin#mbp
 ```
+
+
+## Sops
+
+Secrets are managed by sops-nix
+
+```bash
+# To edit the secrets files
+nix shell nixpkgs#sops
+sops ./secrets/foo.yaml
+```

@@ -20,6 +20,7 @@ with pkgs;
   woff2
   bat
   rsync
+  sops
   #bitwarden-cli
 
   # Dev
@@ -49,6 +50,7 @@ with pkgs;
   tectonic
   tex-fmt
   rustup
+  shfmt
 
   # Fonts
   nerd-fonts.jetbrains-mono
