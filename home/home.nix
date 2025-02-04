@@ -15,10 +15,8 @@
   home.homeDirectory = "/Users/${host.username}";
 
   home.packages =
-    [ ]
-    ++ (import ./home/shared.nix { inherit pkgs; })
-    # TODO: Move to host config
-    ++ lib.optionals (host.hostName == "sflx") (import ./home/sflx.nix { inherit pkgs; });
+    (import ./pkgs.nix { inherit pkgs; })
+    ++ ((lib.attrByPath [ "extras" "pkgs" ] (pkgs: [ ]) host) pkgs);
 
   fonts.fontconfig.enable = true;
 
@@ -28,12 +26,12 @@
     };
 
     file = {
-      ".config/omp/config.yaml".source = ./files/omp/config.yaml;
-      ".config/ghostty/config".source = ./files/ghostty/config;
-      ".gitconfig".source = ./files/git/gitconfig;
-      ".gitignore_global".source = ./files/git/gitignore_global;
-      ".gitconfig.local".source = ./files/git/config.work;
-      ".config/nvim".source = ./files/nvim;
+      ".config/omp/config.yaml".source = ../files/omp/config.yaml;
+      ".config/ghostty/config".source = ../files/ghostty/config;
+      ".gitconfig".source = ../files/git/gitconfig;
+      ".gitignore_global".source = ../files/git/gitignore_global;
+      ".gitconfig.local".source = ../files/git/config.work;
+      ".config/nvim".source = ../files/nvim;
     };
 
     shellAliases = {
@@ -89,7 +87,7 @@
   # Secrets
   sops = {
     age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
-    defaultSopsFile = ./secrets/ssh.yaml;
+    defaultSopsFile = ../secrets/ssh.yaml;
     secrets.config = {
       mode = "0600";
       path = "${config.home.homeDirectory}/.ssh/config";

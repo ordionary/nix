@@ -11,6 +11,7 @@ with pkgs;
   gnutar
   gnupg
   htop
+  btop
   rclone
   rename
   tmux

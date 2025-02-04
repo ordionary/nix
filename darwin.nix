@@ -62,8 +62,7 @@
 
   homebrew = {
     enable = true;
-    # casks = (if builtins.hasAttr "casks" host then host.casks else [ ]) ++ (import ./cask.nix);
-    casks = (lib.attrByPath [ "extras" "casks" ] [ ] host) ++ (import ./cask.nix);
+    casks = (import ./cask.nix) ++ (lib.attrByPath [ "extras" "casks" ] [ ] host);
     taps = [ "lihaoyun6/tap" ];
     onActivation = {
       autoUpdate = true;
