@@ -45,7 +45,7 @@
       e = "nvim";
       g = "lazygit";
       d = "lazydocker";
-      vai = "darwin-rebuild switch --flake ~/.config/nix-darwin#${host.hostName}";
+      vai = "darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
     };
   };
 

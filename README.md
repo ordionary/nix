@@ -10,10 +10,16 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Get repo
-git clone https://github.com/cupcakearmy/nix-macos ~/.config/nix-darwin
+git clone https://github.com/cupcakearmy/nix-macos ~/.config/nix-macos
+
+# Unlock (Given that the base64 key is in your clipboard)
+nix shell nixpkgs#git nixpkgs#git-crypt nixpkgs#coreutils
+pbpaste | base64 --decode > .key
+git-crypt unlock .key
 
 # Installation
-nix run nix-darwin -- switch --flake ~/.config/nix-darwin#mbp
+# Available hosts can be found in the 
+nix run nix-darwin -- switch --flake ~/.config/nix-macos#<host>
 ```
 
 ## Crypt
