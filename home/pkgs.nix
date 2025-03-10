@@ -21,7 +21,6 @@ with pkgs;
   woff2
   bat
   rsync
-  sops
 
   # Dev
   devenv

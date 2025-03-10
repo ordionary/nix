@@ -39,13 +39,25 @@
   system.defaults.dock.persistent-others = [ ];
 
   # Input devices
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = true;
+  system.keyboard = {
+    enableKeyMapping = true;
+    remapCapsLockToEscape = true;
+    userKeyMapping = [
+      {
+        # Unbind cmd + space
+        HIDKeyboardModifierMappingSrc = 30064771129; # Command + Space
+        HIDKeyboardModifierMappingDst = 0; # No action (unbind)
+      }
+    ];
+  };
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 25;
   system.defaults.NSGlobalDomain.KeyRepeat = 2;
   system.defaults.NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
   system.defaults.NSGlobalDomain."com.apple.trackpad.scaling" = 0.875;
-  system.defaults.trackpad.Dragging = true;
+  system.defaults.trackpad = {
+    Dragging = true;
+    Clicking = true;
+  };
 
   # Finder
   system.defaults.finder.AppleShowAllExtensions = true;
