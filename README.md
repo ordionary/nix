@@ -25,6 +25,10 @@ nix run nix-darwin -- switch --flake ~/.config/nix-macos#<host>
 vai
 ```
 
+## Documentation
+
+- [nix-darwin](https://daiderd.com/nix-darwin/manual/index.html)
+
 ## Crypt
 
 Files under `secrets` are encrypted using `git-crypt`.
@@ -37,3 +41,9 @@ git-crypt export-key - | base64 > .key.b64
 cat .key.b64 | base64 --decode > .key
 git-crypt unlock .key
 ```
+
+## TODO
+
+Stuff that I would like to automate, but have not found a way
+
+- Disable the default Spotlight keyboard shortcut. For now manually go to Settings -> Keyboard Shortcuts -> Spotlight -> Untick
