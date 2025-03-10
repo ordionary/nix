@@ -45,6 +45,9 @@
       g = "lazygit";
       d = "lazydocker";
       vai = "darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
+
+      p = "pnpm";
+      px = "pnpm -s dlx";
     };
   };
 

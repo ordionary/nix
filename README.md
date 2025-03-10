@@ -44,6 +44,10 @@ git-crypt unlock .key
 
 ## TODO
 
-Stuff that I would like to automate, but have not found a way
+Stuff that I would like to automate, but have not found a way/time
 
 - Disable the default Spotlight keyboard shortcut. For now manually go to Settings -> Keyboard Shortcuts -> Spotlight -> Untick
+- `chsh -s /run/current-system/sw/bin/fish`
+- vscodium settings (download `zokugun.sync-settings` -> open repository settings -> paste secrets/configs/vscodium-sync.yaml -> download config)
+
+
