@@ -6,6 +6,9 @@ mkdir -p secrets/plist
 # Array of app IDs to export
 APP_IDS=(
   "com.lwouis.alt-tab-macos"
+  "com.jordanbaird.Ice"
+  "com.apphousekitchen.aldente-pro.plist"
+  "com.lihaoyun6.QuickRecorder.plist"
 )
 
 # Export each plist
