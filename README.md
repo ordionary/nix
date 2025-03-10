@@ -18,8 +18,11 @@ pbpaste | base64 --decode > .key
 git-crypt unlock .key
 
 # Installation
-# Available hosts can be found in the 
+# Available hosts can be found in the ./hosts directory
 nix run nix-darwin -- switch --flake ~/.config/nix-macos#<host>
+
+# After installation simply use the provided alias to rebuild
+vai
 ```
 
 ## Crypt
