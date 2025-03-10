@@ -1,0 +1,159 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+palette:
+  error-0: '#ff4040'
+  error-10: '#e23629'
+  error-15: '#d33220'
+  error-20: '#c52e18'
+  error-30: '#a8280d'
+  error-40: '#8a2106'
+  error-5: '#f03a34'
+  error-50: '#6d1b02'
+  error-60: '#501401'
+  error-70: '#330d00'
+  main-0: '#f7fbff'
+  main-10: '#b4cafd'
+  main-15: '#95a9fc'
+  main-20: '#7783fa'
+  main-30: '#5348f4'
+  main-40: '#4826e8'
+  main-5: '#d6e6fe'
+  main-50: '#3e10ca'
+  main-60: '#22036e'
+  main-70: '#020008'
+  success-0: '#40ff46'
+  success-10: '#29e243'
+  success-15: '#20d342'
+  success-20: '#18c541'
+  success-30: '#0da83d'
+  success-40: '#068a36'
+  success-5: '#34f044'
+  success-50: '#026d2d'
+  success-60: '#015022'
+  success-70: '#003316'
+  warning-0: '#ffff40'
+  warning-10: '#dae229'
+  warning-15: '#c8d320'
+  warning-20: '#b6c518'
+  warning-30: '#96a80d'
+  warning-40: '#788a06'
+  warning-5: '#ecf034'
+  warning-50: '#5d6d02'
+  warning-60: '#435001'
+  warning-70: '#2a3300'
+blocks:
+  - type: prompt
+    alignment: left
+    segments:
+      - leading_diamond: 
+        foreground: p:main-70
+        background: p:main-5
+        type: os
+        style: diamond
+      - properties:
+          style: full
+        template: " \uf0e7 "
+        foreground: p:main-70
+        powerline_symbol: 
+        background: p:error-15
+        type: root
+        style: powerline
+      - properties:
+          style: full
+        template: ' {{ .Path }} '
+        foreground: p:main-0
+        powerline_symbol: 
+        background: p:main-40
+        type: path
+        style: powerline
+      - template: ' {{ .HEAD }} '
+        foreground: p:main-70
+        powerline_symbol: 
+        background: p:warning-10
+        type: git
+        style: powerline
+  - type: prompt
+    alignment: right
+    segments:
+      - leading_diamond: 
+        trailing_diamond: 
+        foreground: p:main-70
+        background: p:main-10
+        type: python
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        foreground: p:main-70
+        background: p:main-10
+        type: go
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        foreground: p:main-70
+        background: p:main-10
+        type: node
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        template: '{{ .Context }}{{ if .Namespace }}::{{ .Namespace }}{{ end }}'
+        foreground: p:main-70
+        background: p:main-10
+        type: kubectl
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        template: '{{ .Icon }} {{ .Server }}'
+        foreground: p:main-70
+        background: p:main-10
+        type: docker
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        foreground: p:main-70
+        background: p:main-10
+        type: rust
+        style: dynamic
+      - leading_diamond: 
+        trailing_diamond: 
+        foreground: p:main-70
+        background: p:main-10
+        type: battery
+        style: dynamic
+      - properties:
+          always_enabled: true
+        leading_diamond: 
+        template: "{{ if gt .Code 0 }}\uf00d {{ .Code }} {{ .Meaning }}{{ else }}\uf42e{{ end }}"
+        foreground: p:main-70
+        type: status
+        style: diamond
+        background_templates:
+          - '{{ if gt .Code 0 }}p:error-0{{ else }}p:main-10{{ end }}'
+      - properties:
+          always_enabled: true
+          style: round
+        foreground: p:main-70
+        powerline_symbol: 
+        background: p:main-5
+        type: executiontime
+        style: powerline
+      - properties:
+          time_format: '15:04:05'
+        template: ' {{ .CurrentDate | date .Format }} '
+        foreground: p:main-70
+        powerline_symbol: 
+        background: p:main-0
+        type: time
+        style: powerline
+  - type: prompt
+    alignment: left
+    segments:
+      - properties:
+          always_enabled: true
+        template: '❯ '
+        foreground: p:main-15
+        type: status
+        style: plain
+        foreground_templates:
+          - '{{ if gt .Code 0 }}p:error-15{{ end }}'
+    newline: true
+version: 3
