@@ -21,9 +21,11 @@
   "balenaetcher"
 
   # Apps
+  "obsidian"
   "figma"
   "arc"
   "firefox"
+  "zen-browser"
   "bitwarden"
   "spotify"
   "vlc"

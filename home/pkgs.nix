@@ -21,6 +21,7 @@ with pkgs;
   woff2
   bat
   rsync
+  yq
 
   # Dev
   devenv
@@ -54,6 +55,7 @@ with pkgs;
   ruby
   ruby-lsp
   rubyPackages.prism
+  go
 
   # Fonts
   nerd-fonts.jetbrains-mono
