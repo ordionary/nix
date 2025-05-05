@@ -52,9 +52,6 @@ with pkgs;
   tex-fmt
   rustup
   shfmt
-  ruby
-  ruby-lsp
-  rubyPackages.prism
   go
 
   # Fonts

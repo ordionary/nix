@@ -17,6 +17,7 @@
   "sloth"
   "vscodium"
   "hoppscotch"
+  "postman"
   "utm"
   "balenaetcher"
   "outerbase-studio"
