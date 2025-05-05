@@ -39,7 +39,7 @@
       orientation = "left";
       show-recents = false;
       persistent-apps = [
-        "/Applications/Arc.app"
+        "/Applications/Zen.app"
         "/Applications/Ghostty.app"
         "/Applications/VSCodium.app"
         "/Applications/Spotify.app"

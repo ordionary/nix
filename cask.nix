@@ -19,6 +19,7 @@
   "hoppscotch"
   "utm"
   "balenaetcher"
+  "outerbase-studio"
 
   # Apps
   "obsidian"
