@@ -51,9 +51,6 @@ with pkgs;
   tex-fmt
   rustup
   shfmt
-  ruby
-  ruby-lsp
-  rubyPackages.prism
 
   # Fonts
   nerd-fonts.jetbrains-mono
