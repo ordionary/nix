@@ -20,6 +20,13 @@
   # Nix Darwin
   # https://daiderd.com/nix-darwin/manual/index.html
 
+  # networking.hosts = {
+  #   "127.0.0.1" = [
+  #     "localhost"
+  #     "dev.buena.com"
+  #   ];
+  # };
+
   system.defaults = {
     # Security
     screensaver.askForPassword = true;
@@ -81,8 +88,12 @@
     enable = true;
     casks = (import ./cask.nix) ++ (lib.attrByPath [ "extras" "casks" ] [ ] host);
     taps = [ "lihaoyun6/tap" ];
+    global = {
+      autoUpdate = true;
+    };
     onActivation = {
       autoUpdate = true;
+      upgrade = true;
       cleanup = "zap";
     };
   };
