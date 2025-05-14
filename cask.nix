@@ -28,6 +28,8 @@
   "arc"
   "firefox"
   "zen-browser"
+  "brave-browser"
+  "vivaldi"
   "bitwarden"
   "spotify"
   "vlc"
