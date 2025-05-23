@@ -16,6 +16,7 @@
         boundary
         awscli2
         _1password-cli
+        vault
       ];
   };
 }

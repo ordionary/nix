@@ -19,9 +19,18 @@ with pkgs;
   tree
   wget
   woff2
-  bat
   rsync
   yq
+
+  # Rust utils
+  bat
+  eza
+  ripgrep
+  ripgrep-all
+  zoxide
+  uutils-coreutils-noprefix
+  dust
+  yazi
 
   # Dev
   devenv
@@ -38,7 +47,6 @@ with pkgs;
   lua
   luajitPackages.luarocks
   ast-grep
-  ripgrep
 
   # Language specific
   nixfmt-rfc-style
