@@ -37,7 +37,8 @@
     };
 
     shellAliases = {
-      l = "ls -hal";
+      l = "eza -a1lh";
+      ls = "eza";
       dc = "docker compose";
       rsync = "rsync -az --info=progress2";
       t = "tmux new-session -A -s main";

@@ -25,6 +25,7 @@ with pkgs;
   # Rust utils
   bat
   eza
+  fd
   ripgrep
   ripgrep-all
   zoxide
