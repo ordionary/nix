@@ -58,8 +58,11 @@
     fish = {
       enable = true;
       interactiveShellInit = ''
-        if type -q oh-my-posh
-          oh-my-posh init fish --config ~/.config/omp/config.yaml | source
+        # if type -q oh-my-posh
+        #   oh-my-posh init fish --config ~/.config/omp/config.yaml | source
+        # end
+        if type -q starship
+          starship init fish | source
         end
         if type -q fnm
           fnm env --use-on-cd | source

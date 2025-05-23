@@ -31,6 +31,7 @@ with pkgs;
   uutils-coreutils-noprefix
   dust
   yazi
+  starship
 
   # Dev
   devenv
