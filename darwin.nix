@@ -20,12 +20,7 @@
   # Nix Darwin
   # https://daiderd.com/nix-darwin/manual/index.html
 
-  # networking.hosts = {
-  #   "127.0.0.1" = [
-  #     "localhost"
-  #     "dev.buena.com"
-  #   ];
-  # };
+  system.primaryUser = host.username;
 
   system.defaults = {
     # Security

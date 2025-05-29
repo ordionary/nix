@@ -26,7 +26,7 @@
   "figma"
   "arc"
   "firefox"
-  "zen-browser"
+  "zen"
   "brave-browser"
   "vivaldi"
   "bitwarden"
