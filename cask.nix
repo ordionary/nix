@@ -1,8 +1,10 @@
 [
+  # Objective See
   "knockknock"
   "lulu"
   "oversight"
 
+  # Utility
   "aldente"
   "alt-tab"
   "keka"
@@ -21,25 +23,15 @@
   "balenaetcher"
   "outerbase-studio"
 
-  # Apps
+  # Base
   "obsidian"
   "figma"
-  "arc"
-  "firefox"
   "zen"
-  "brave-browser"
-  "vivaldi"
   "bitwarden"
   "spotify"
-  "vlc"
   "slack"
   "yubico-authenticator"
-  "suspicious-package"
   "mediahuman-audio-converter"
   "imageoptim"
   "appcleaner"
-  "daisydisk"
-  "discord"
-  "signal"
-  "vlc"
 ]
