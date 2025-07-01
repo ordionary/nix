@@ -29,7 +29,7 @@
       ".config/ghostty/config".source = ../files/ghostty/config;
       ".gitconfig".source = ../files/git/gitconfig;
       ".gitignore_global".source = ../files/git/gitignore_global;
-      ".gitconfig.local".source = ../files/git/config.work;
+      ".gitconfig.local".source = ../secrets/git/config.${host.hostName};
       ".config/nvim".source = ../files/nvim;
 
       # Secrets
