@@ -70,6 +70,13 @@
     remapCapsLockToEscape = true;
   };
 
+  # Power
+  power = {
+    sleep = {
+      computer = "never";
+    };
+  };
+
   # Other
   system.startup.chime = false;
 
