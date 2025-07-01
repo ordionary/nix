@@ -6,9 +6,14 @@
 
   extras = {
     casks = [
+      "tableplus"
+      "http-toolkit"
+      "phpstorm"
     ];
     pkgs =
       pkgs: with pkgs; [
+        mkcert
+        dnsmasq
       ];
   };
 }

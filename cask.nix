@@ -15,7 +15,7 @@
   "lihaoyun6/tap/quickrecorder"
 
   # Dev
-  "docker"
+  "docker-desktop"
   "sloth"
   "vscodium"
   "bruno"
