@@ -14,6 +14,7 @@
       "handbrake"
       "daisydisk"
       "blender"
+      "bambu-studio"
     ];
     pkgs =
       pkgs: with pkgs; [
