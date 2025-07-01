@@ -33,7 +33,9 @@
       ".config/nvim".source = ../files/nvim;
 
       # Secrets
-      ".ssh/config".source = ../secrets/ssh/config;
+      ".ssh/config".text = builtins.replaceStrings [ "@SSH_KEY@" ] [ host.sshKey ] (
+        builtins.readFile ../secrets/ssh/config.template
+      );
     };
 
     shellAliases = {
