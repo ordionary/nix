@@ -9,6 +9,7 @@
       "tableplus"
       "http-toolkit"
       "phpstorm"
+      "notion"
     ];
     pkgs =
       pkgs: with pkgs; [

@@ -25,7 +25,6 @@
     };
 
     file = {
-      ".config/omp/config.yaml".source = ../files/omp/config.yaml;
       ".config/ghostty/config".source = ../files/ghostty/config;
       ".gitconfig".source = ../files/git/gitconfig;
       ".gitignore_global".source = ../files/git/gitignore_global;
@@ -39,18 +38,22 @@
     };
 
     shellAliases = {
+      # Rust re-maps
       l = "eza -a1lh";
       ls = "eza";
+      cat = "bat";
+
+      # QOL
       dc = "docker compose";
       rsync = "rsync -az --info=progress2";
       t = "tmux new-session -A -s main";
       e = "nvim";
       g = "lazygit";
       d = "lazydocker";
-      vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
-
       p = "pnpm";
       px = "pnpm -s dlx";
+
+      vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
     };
   };
 
@@ -61,9 +64,6 @@
     fish = {
       enable = true;
       interactiveShellInit = ''
-        # if type -q oh-my-posh
-        #   oh-my-posh init fish --config ~/.config/omp/config.yaml | source
-        # end
         if type -q starship
           starship init fish | source
         end

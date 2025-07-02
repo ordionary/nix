@@ -16,10 +16,14 @@
 	sort = -committerdate
 [alias]
 	fpush = push --force-with-lease
+
+# Signing
 [tag]
 	gpgsign = true
 [commit]
 	gpgsign = true
+[gpg]
+	format = ssh
 
 [include]
     path = ~/.gitconfig.local
