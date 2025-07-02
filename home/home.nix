@@ -38,18 +38,22 @@
     };
 
     shellAliases = {
+      # Rust re-maps
       l = "eza -a1lh";
       ls = "eza";
+      cat = "bat";
+
+      # QOL
       dc = "docker compose";
       rsync = "rsync -az --info=progress2";
       t = "tmux new-session -A -s main";
       e = "nvim";
       g = "lazygit";
       d = "lazydocker";
-      vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
-
       p = "pnpm";
       px = "pnpm -s dlx";
+
+      vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
     };
   };
 
