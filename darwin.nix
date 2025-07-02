@@ -6,7 +6,7 @@
   ...
 }:
 {
-  nix.enable = false;
+  # nix.enable = false;
   nix.settings.experimental-features = "nix-command flakes";
 
   # Set Git commit hash for darwin-version.
