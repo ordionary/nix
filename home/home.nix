@@ -25,7 +25,6 @@
     };
 
     file = {
-      ".config/omp/config.yaml".source = ../files/omp/config.yaml;
       ".config/ghostty/config".source = ../files/ghostty/config;
       ".gitconfig".source = ../files/git/gitconfig;
       ".gitignore_global".source = ../files/git/gitignore_global;
@@ -61,9 +60,6 @@
     fish = {
       enable = true;
       interactiveShellInit = ''
-        # if type -q oh-my-posh
-        #   oh-my-posh init fish --config ~/.config/omp/config.yaml | source
-        # end
         if type -q starship
           starship init fish | source
         end

@@ -3,7 +3,6 @@ with pkgs;
 [
   # Base
   tmux
-  oh-my-posh
   git
   git-lfs
   git-crypt
