@@ -4,6 +4,7 @@
 
 ```bash
 # Install nix [without the --determinate flag]
+# ⚠️ When asked if install the determinate version say no
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 # Install brew [for casks]
@@ -19,7 +20,7 @@ git-crypt unlock .key
 
 # Installation
 # Available hosts can be found in the ./hosts directory
-nix run nix-darwin -- switch --flake ~/.config/nix-macos#<host>
+sudo nix run nix-darwin -- switch --flake ~/.config/nix-macos#<host>
 
 # After installation simply use the provided alias to rebuild
 vai
@@ -55,5 +56,3 @@ Stuff that I would like to automate, but have not found a way/time
   - surfshark
   - ublock origin
   - vimium
-
-
