@@ -18,6 +18,7 @@
   "docker-desktop"
   "sloth"
   "vscodium"
+  "visual-studio-code"
   "bruno"
   "utm"
   "balenaetcher"

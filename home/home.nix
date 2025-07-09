@@ -52,6 +52,7 @@
       d = "lazydocker";
       p = "pnpm";
       px = "pnpm -s dlx";
+      n = "fnm use --install-if-missing";
 
       vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
     };
