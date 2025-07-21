@@ -15,6 +15,8 @@
       pkgs: with pkgs; [
         mkcert
         dnsmasq
+        awscli2
+        mysql84
       ];
   };
 }
