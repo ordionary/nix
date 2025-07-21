@@ -20,6 +20,7 @@ with pkgs;
   woff2
   rsync
   yq
+  delta
 
   # Rust utils
   bat

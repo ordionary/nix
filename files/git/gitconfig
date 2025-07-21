@@ -4,9 +4,12 @@
 	process = git-lfs filter-process
 	required = true
 [core]
+    pager = delta
 	excludesfile = ~/.gitignore_global
 	autocrlf = input
 	ignorecase=false
+[interactive]
+    diffFilter = delta --color-only
 
 [pull]
 	rebase = false
@@ -27,3 +30,6 @@
 
 [include]
     path = ~/.gitconfig.local
+
+[delta]
+    navigate = true
