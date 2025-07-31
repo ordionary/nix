@@ -23,6 +23,7 @@
   "utm"
   "balenaetcher"
   "outerbase-studio"
+  "hoppscotch"
 
   # Base
   "obsidian"
