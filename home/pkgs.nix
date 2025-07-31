@@ -66,4 +66,5 @@ with pkgs;
 
   # Fonts
   nerd-fonts.jetbrains-mono
+  karla
 ]
