@@ -23,11 +23,13 @@
   "utm"
   "balenaetcher"
   "outerbase-studio"
+  "hoppscotch"
 
   # Base
   "obsidian"
   "figma"
   "zen"
+  "zen@twilight"
   "bitwarden"
   "spotify"
   "slack"
