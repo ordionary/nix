@@ -40,7 +40,7 @@
       persistent-apps = [
         "/Applications/Zen.app"
         "/Applications/Ghostty.app"
-        "/Applications/VSCodium.app"
+        "/Applications/Visual Studio Code.app"
         "/Applications/Spotify.app"
         "/System/Applications/System Settings.app"
       ];
