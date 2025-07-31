@@ -17,6 +17,8 @@
         dnsmasq
         awscli2
         mysql84
+        cocoapods
+        xcodes
       ];
   };
 }
