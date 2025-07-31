@@ -29,7 +29,6 @@
   "obsidian"
   "figma"
   "zen"
-  "zen@twilight"
   "bitwarden"
   "spotify"
   "slack"
