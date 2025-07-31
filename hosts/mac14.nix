@@ -22,6 +22,7 @@
         biome
         infisical
         ffmpeg
+        pulumi
       ];
   };
 }
