@@ -41,6 +41,7 @@ with pkgs;
   colima
   lazydocker
   exercism
+  posting
 
   # Editor
   neovim
