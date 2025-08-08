@@ -19,6 +19,15 @@
         mysql84
         cocoapods
         xcodes
+
+        # For projects
+        pixman
+        pkg-config
+        pango
+        libpng
+        giflib
+        librsvg
+        python313Packages.setuptools
       ];
   };
 }

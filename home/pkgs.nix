@@ -41,8 +41,10 @@ with pkgs;
   colima
   lazydocker
   exercism
+  posting
 
   # Editor
+  nvs
   neovim
   fzf
   lazygit
