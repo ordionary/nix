@@ -21,6 +21,31 @@
     let
       hosts = import ./hosts;
       inherit (builtins) listToAttrs;
+      overlay = final: prev: {
+        nvs = prev.buildGoModule rec {
+          pname = "nvs";
+          version = "1.10.5";
+
+          src = prev.fetchFromGitHub {
+            owner = "y3owk1n";
+            repo = pname;
+            tag = "v${version}";
+            sha256 = "sha256-Qp5c2F383Z0MxTtDt3wmLgxiAwfIJWupVDCePrBxNQI=";
+          };
+
+          # # Add completion generation
+          nativeBuildInputs = [ prev.installShellFiles ];
+          postInstall = ''
+            export HOME=$TMPDIR
+            installShellCompletion --cmd nvs \
+              --bash <($out/bin/nvs completion bash) \
+              --fish <($out/bin/nvs completion fish) \
+              --zsh <($out/bin/nvs completion zsh)
+          '';
+
+          vendorHash = "sha256-l2FdnXA+vKVRekcIKt1R+MxppraTsmo0b/B7RNqnxjA=";
+        };
+      };
     in
     {
       darwinConfigurations = listToAttrs (
@@ -32,6 +57,9 @@
               flake = self;
             };
             modules = [
+              {
+                nixpkgs.overlays = [ overlay ];
+              }
               (import ./darwin.nix)
               home-manager.darwinModules.home-manager
               {

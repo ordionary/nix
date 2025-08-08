@@ -44,6 +44,7 @@ with pkgs;
   posting
 
   # Editor
+  nvs
   neovim
   fzf
   lazygit
