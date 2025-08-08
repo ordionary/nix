@@ -42,6 +42,9 @@ with pkgs;
   lazydocker
   exercism
   posting
+  terraform
+  k9s
+  kubectl
 
   # Editor
   nvs
