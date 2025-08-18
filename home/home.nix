@@ -55,6 +55,7 @@
       px = "pnpm -s dlx";
       n = "fnm use --install-if-missing";
       c = "pwd | pbcopy";
+      k = "kubectl";
 
       vai = "sudo darwin-rebuild switch --flake ~/.config/nix-macos#${host.hostName}";
     };
@@ -72,6 +73,9 @@
         end
         if type -q fnm
           fnm env --use-on-cd | source
+        end
+        if type -q nvs
+          nvs env --source | source
         end
       '';
     };
