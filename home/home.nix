@@ -42,6 +42,7 @@
       l = "eza -a1lh";
       ls = "eza";
       cat = "bat";
+      cd = "z";
 
       # QOL
       dc = "docker compose";
