@@ -30,7 +30,6 @@
   "zen"
   "bitwarden"
   "spotify"
-  "tidal"
   "slack"
   "yubico-authenticator"
   "mediahuman-audio-converter"
