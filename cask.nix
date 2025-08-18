@@ -19,7 +19,6 @@
   "sloth"
   "vscodium"
   "visual-studio-code"
-  "bruno"
   "utm"
   "balenaetcher"
   "outerbase-studio"
