@@ -28,6 +28,7 @@
   "obsidian"
   "figma"
   "zen"
+  "ungoogled-chromium"
   "bitwarden"
   "spotify"
   "slack"
