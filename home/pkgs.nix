@@ -40,6 +40,7 @@ with pkgs;
   ollama
   colima
   lazydocker
+  lazysql
   exercism
   posting
   terraform
